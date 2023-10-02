@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #778899;
+}
+
+.header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Равномерное разделение высоты на две половины */
+    background-color: #fff; /* Цвет фона разделения */
+}
+
+.waiting,
+.reality {
+    text-align: center;
+    width: 50%; /* Равномерное разделение ширины на две половины */
+    padding: 20px;
+}
+
+.waiting {
+    background-color: #f0f0f0; /* Цвет фона левой половины */
+}
+
+.reality {
+    background-color: #e0e0e0; /* Цвет фона правой половины */
+}
+
+
+.timeline {
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: flex-start;
+    background-color: #778899;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если содержимое не помещается */
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #778899;
+    overflow-x: auto;
+    margin-bottom: 30px; /* Добавляем отступ снизу таймлайна */
+}
+
+.timeline .years:last-child {
+    margin-bottom: 0; /* Убираем отступ снизу у последнего года */
+}
+.year {
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: 30px; /* Фиксированная ширина рамки года */
+    padding: 10px;
+    margin: 10px;
+    z-index: 1; /* Поднимаем года над событиями */
+    min-height: 30px; /* Минимальная высота года */
+    position: relative; /* Позиционирование для текста года */
+}
+
+.year-text {
+    writing-mode: vertical-rl; /* Вертикальное направление текста */
+    text-orientation: mixed; /* Вертикальное направление текста */
+    white-space: nowrap; /* Запрет переноса текста */
+    position: absolute; /* Позиционирование текста года */
+    top: 50%; /* Смещение текста на половину высоты года по вертикали */
+    left: 50%; /* Смещение текста на половину ширины года по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование текста года */
+}
+
+.event {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: relative; /* Используем relative для событий */
+    width: 200px; /* Фиксированная ширина события */
+    text-align: center;
+    white-space: normal;
+    transition: opacity 0.3s ease;
+    margin: 10px 0; /* Добавляем отступ между событиями */
+}
+
+.event-left {
+    left: -240px; /* Отступ слева для событий */
+}
+
+.event-right {
+    right: -50px; /* Отступ справа для событий */
+}
